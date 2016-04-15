@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title>页面内的搜索框</title>
+    <style>
+    	header{
+    		width: 100%;
+    		height: 50px;
+    		background-color: #009DD9;
+    	}
+    	header h1{
+    		text-align: center;
+    		font-size: 18px;
+    		color: #fff;
+    		line-height: 50px;
+    	}
+    	a{
+    		display: block;
+    		width: 100%;
+    		height: 44px;
+    		background-color: #BD0000;
+    		margin-top: 50px;
+    		text-decoration: none;
+    		line-height: 44px;
+    		color: #FFFFFF;
+    		text-align: center;
+    		border-radius: 5px;
+    	}
+    	section{
+    		position: fixed;
+    		bottom: 0;
+    		top: 0;
+    		left: 0;
+    		right: 0;
+    		z-index: 10;
+    		background-color: #d9d9d9;
+    		display: none;
+    	}
+    	#input{
+    		width: 100%;
+    		height: 44px;
+    		margin-top: 20px;
+    	}
+    </style>
+</head>
+<body>	
+	<header>
+		<h1 class="mui-title">页面内的跳转</h1>
+	</header>
+	<a href="#" id="btn">点击此按钮打开一个搜索框</a>
+	<p>
+		同一个页面，增加一个隐藏层，当点击按钮时，显示隐藏层，隐藏层中的input表单自动获取焦点，此时，输入法面板打开。
+	</p>
+	<section>
+		<form action="">
+					<input type="text" name="" id="input" autofocus="autofocus" placeholder="这是一个自动获取焦点的输入框"/>
+		</form>
+
+	</section>
+	<script src="js/jquery-2.1.0.js"></script>
+	<script>
+		$(function(){
+			$('#btn').click(function(){
+				$('section').show();
+				$('#input').focus();
+			})
+		})
+	</script>
+</body>
+</html>
